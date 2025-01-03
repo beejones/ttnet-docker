@@ -1,6 +1,6 @@
 services:
   ttnet:
-    image: ttnet-docker
+    image: ttnet
     build: .
     container_name: ttnet
     #deploy:
@@ -10,8 +10,8 @@ services:
     #        - capabilities: [gpu]
     environment:
       - NVIDIA_VISIBLE_DEVICES=all
-    volumes:
-      - /home/azureuser/TTNet-Real-time-Analysis-System-for-Table-Tennis-Pytorch:/workspace/TTNet-Real-time-Analysis-System-for-Table-Tennis-Pytorch
+    #volumes:
+    #  - /workspaces/ttnet-docker/ttnet:/ttnet
     ports:
       - "6006:6006"    
     
